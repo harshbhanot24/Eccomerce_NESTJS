@@ -27,6 +27,6 @@ import { ItemService } from './services/item.service';
     synchronize: true,
   }), DiscountModule, FinalDiscountModule, ItemModule, CartModule, BillingModule],
   controllers: [AppController, ItemController, DiscountController, CartController, FinalDiscountController],
-  providers: [AppService, CartService, DiscountService,ItemService, FinalDiscountService],
+  providers: [AppService, CartService, DiscountService,ItemService, FinalDiscountService,],
 })
 export class AppModule {}

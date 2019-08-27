@@ -5,9 +5,9 @@ export class FinalDiscount extends BaseEntity{
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column('int')
+  @Column('decimal')
   limit: number;
 
-  @Column('decimal')
+  @Column('float')
      discount: number;
 }

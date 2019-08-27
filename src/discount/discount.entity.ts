@@ -15,7 +15,7 @@ export class Discount extends BaseEntity {
   @Column('int')
   quantity: number;
 
-  @Column('decimal')
+  @Column('float')
      discount: number;
 
 }

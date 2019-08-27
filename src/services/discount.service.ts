@@ -8,8 +8,8 @@ import { ItemDto as Item } from '../item/item.dto';
 export class DiscountService {
   constructor(private readonly ItemService: ItemService) {}
   async create(discountItem) {
-    const item = await this.ItemService.findOne(discountItem.itemId);
-    console.log(item);
+    const item = await this.ItemService.findOne(discountItem.ItemId);
+    // console.log(item);
     discountItem.Item = item;
     const data = Discount.create(discountItem);
     // console.log(data);

@@ -8,7 +8,7 @@ export class Item extends BaseEntity{
   @Column()
   name: string;
 
-  @Column()
+  @Column('float')
   price: number;
 
   @Column('int')
