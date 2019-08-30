@@ -1,11 +1,11 @@
-import { Entity, Column, PrimaryGeneratedColumn,OneToOne, JoinColumn, BaseEntity } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, BaseEntity } from 'typeorm';
 
 @Entity()
-export class FinalDiscount extends BaseEntity{
+export class FinalDiscount extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column('decimal')
+  @Column('float')
   limit: number;
 
   @Column('float')

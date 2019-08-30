@@ -6,9 +6,9 @@ import { ItemService } from './item.service';
 import { ItemDto as Item } from '../item/item.dto';
 @Injectable()
 export class DiscountService {
-  constructor(private readonly ItemService: ItemService) {}
+  constructor(private readonly itemService: ItemService) {}
   async create(discountItem) {
-    const item = await this.ItemService.findOne(discountItem.ItemId);
+    const item = await this.itemService.findOne(discountItem.ItemId);
     // console.log(item);
     discountItem.Item = item;
     const data = Discount.create(discountItem);
@@ -20,7 +20,7 @@ export class DiscountService {
     return await Discount.find();
   }
   async findOne(id) {
-    return await Discount.find({ where: { Item: { id: id } } });
+    return await Discount.find({ where: { Item: { id } } });
     // return discount for particular item id
   }
   async update(id, list) {
